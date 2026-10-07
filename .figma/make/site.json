@@ -1,0 +1,10 @@
+{
+  "description": "A mobile-first landing page for STOP PET, a pet shop in Santana do Paraíso, offering easy access to pet care services and products via WhatsApp.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
