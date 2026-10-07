@@ -4,7 +4,6 @@ import {
   Bone,
   Camera,
   ChevronRight,
-  Clock3,
   Heart,
   MapPin,
   Menu,
@@ -651,8 +650,8 @@ export default function App() {
                       Qual é o horário de funcionamento?
                     </AccordionTrigger>
                     <AccordionContent>
-                      Consulte o horário oficial neste campo editável: [HORÁRIO
-                      REAL]. Se preferir, confirme pelo WhatsApp antes de vir.
+                      Confirme o horário de funcionamento pelo WhatsApp antes de
+                      vir. Respondemos rapidinho!
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="payment">
@@ -690,16 +689,7 @@ export default function App() {
               <Primitive.div className="p-5 sm:p-8 lg:p-12">
                 <Primitive.div className="space-y-7">
                   {[
-                    [
-                      MapPin,
-                      "Endereço",
-                      "[ENDEREÇO REAL]",
-                    ],
-                    [
-                      Clock3,
-                      "Horário",
-                      "[HORÁRIO REAL]",
-                    ],
+                    [MapPin, "Localização", "Santana do Paraíso, MG"],
                     [WhatsAppIcon, "WhatsApp", "(31) 97252-0027"],
                     [Camera, "Instagram", "@stop__pets"],
                   ].map(([Icon, label, value]) => {
@@ -714,11 +704,7 @@ export default function App() {
                             {String(label)}
                           </Primitive.p>
                           <Primitive.p
-                            className={cn(
-                              "mt-1 break-words font-semibold leading-6",
-                              String(value).startsWith("[") &&
-                                "inline-flex rounded-lg border border-white/40 bg-white/15 px-2.5 py-1 text-white",
-                            )}
+                            className="mt-1 break-words font-semibold leading-6"
                           >
                             {String(value)}
                           </Primitive.p>
@@ -741,7 +727,7 @@ export default function App() {
               <Primitive.div className="relative min-h-72 overflow-hidden bg-secondary-dark sm:min-h-80">
                 <img
                   src={mapImage}
-                  alt="Mapa estático de Santana do Paraíso, atualizar após inserir o endereço real"
+                  alt="Mapa de Santana do Paraíso, MG"
                   className="absolute inset-0 size-full object-cover"
                   loading="lazy"
                 />
